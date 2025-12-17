@@ -4,7 +4,7 @@ import { ToastContainer, toast, Bounce } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import {  MdDelete  } from "react-icons/md";
 
-export default function Courses({ image, title, sub, price, dis, hide }) {
+export default function Courses({ image, title, sub, price, dis, hide, onPurchase }) {
 
   const [purchased, setPurchased] = useState(false);
   const [Price, setPrice] = useState(price);
@@ -26,6 +26,9 @@ export default function Courses({ image, title, sub, price, dis, hide }) {
       transition: Bounce,
     });
     setPurchased(true);
+    if (onPurchase) {
+      onPurchase(Price);
+    }
   }
 
   function applyDiscount() {

@@ -176,3 +176,117 @@ body    {
 #Hide :hover{
        
 }
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.modal-content {
+    background-color: rgb(254, 247, 255);
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #512676;
+    color: white;
+    border-radius: 10px 10px 0 0;
+}
+
+.modal-header h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+    padding: 0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.close-btn:hover {
+    color: #cc227b;
+}
+
+.modal-body {
+    padding: 20px;
+}
+
+.no-courses {
+    text-align: center;
+    color: #666;
+    font-size: 16px;
+    padding: 40px 20px;
+}
+
+.purchased-courses-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.purchased-course-item {
+    display: flex;
+    gap: 15px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.purchased-course-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.course-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.course-details h3 {
+    margin: 0 0 5px 0;
+    color: #512676;
+    font-size: 18px;
+}
+
+.course-details p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.course-details .price {
+    color: #cc227b;
+    font-weight: bold;
+    font-size: 16px;
+}
